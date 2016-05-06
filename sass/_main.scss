@@ -4,17 +4,20 @@
 
  .header{
 	@include povh('');
-	padding: 30px 0;
+	padding: 34px 0;
+	padding-bottom: 24px;
  }
  	.logo{
  		float: left;
  		width: 167px;
  		overflow: hidden;
+ 		padding-left: 2px;
  	}
  	.center_head{
  		float: left;
  		@include povh('');
  		width: 454px;
+ 		padding-left: 10px;
  	}
 		.metro{
 			color: #939598;
@@ -83,6 +86,7 @@
 		}
 	.right_head{
 		float: right;
+		line-height: 1.2;
 		width: 300px;
 		& > div{
 			width: 50%;
@@ -246,6 +250,7 @@
  						text-align: center;
  						color: #414042;
  						font-size: 15px;
+ 						line-height: 1.1;
  						background:#e6e6e7;
  					}
  					ul{
@@ -267,7 +272,7 @@
 		border: #d1d3d4 1px solid;
 		border-left: none;
 		border-right: none;
-		margin:33px 0;
+		margin:26px 0;
 		font-size: 13px;
 		color: #6d6e71;
 		.warning_block{
@@ -445,6 +450,7 @@
 						background:#f1f1f2;
 						width: 100%;
 						padding: 0 13px;
+						opacity: 0.9;
 					}
 				}
 			}
@@ -455,8 +461,7 @@
 			color: #fdb913;
 		}
 	}
-/*----------end main----------*/	
-
+/*----------end main----------*/
 	
 /*----------footer----------*/
  
@@ -467,5 +472,103 @@
 	background:#f5f6f6;
 	padding: 30px 0 0 0;
  }
-
+ 	.foot_top{
+ 		padding-bottom: 25px;
+ 		@include povh('');
+ 	}
+		.foot_block{
+			width: 180px;
+			padding: 0 0 0 40px;
+			float: left;
+			font-size: 12px;
+			color: #6d6e71;
+			&:last-child{
+				float: right;
+  				width: 208px;
+			}
+			h6{
+				font-size: 14px;
+				color: #414042;
+				padding-bottom: 8px;
+			}
+			li{
+				padding-bottom: 10px;
+			}
+			a{
+				&:hover{
+					color: #fdb913;
+					text-decoration: underline;
+				}
+			}
+			p{
+				padding-bottom: 10px;
+			}
+		}
+	.foot_bottom{
+		background:#ffcc05;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		address, a{
+			display: inline-block;
+			font-style: normal;
+			color: #414042;
+			padding: 0 0 0 40px;
+			width: 180px;
+		}
+		a{
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
 /*----------end footer----------*/
+
+/*----------fixed----------*/
+.fixed_block{
+	position: fixed;
+	z-index: 99;
+	right: 0;
+	top: 30%;
+	figure{
+		width: 250px;
+		height: 90px;
+		background:#ffcc05;
+		margin-bottom: 15px;
+		box-shadow: 0 0 30px #dededf;
+		border-radius: 5px 0 0 5px ;
+		&:hover{
+			background:#fdb913;
+		}
+		a{
+			display: table-cell;
+			width: 250px;
+			height: 90px;
+			text-decoration: none;
+			color: #231f20;
+			font-weight: bold;
+			font-size: 18px;
+			vertical-align: middle;
+			img{
+				float: left;
+				padding: 0 20px;
+				position: relative;
+				top: 5px;
+			}
+		}
+	}
+}
+.totop{
+	position: fixed;
+	bottom: 25px;
+	left: 3%;
+	z-index: 99;
+	@include gray;
+	opacity: 0.7;
+	transition: all 0.5s ease;
+	&:hover{
+		opacity: 1;
+		@include gray-zero;
+	}
+}
+/*----------end-fixed----------*/

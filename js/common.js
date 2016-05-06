@@ -30,4 +30,10 @@ $(document).ready(function() {
 	  slideWidth: 172,
 	  slideMargin: 24
 	});
+
+	//scroll to
+	$('.totop').on('click',function(){
+		$('html,body').animate({scrollTop:$($(this).attr('href')).offset().top-55},800);
+		return false;
+	});
 });

@@ -181,7 +181,7 @@ $breaklarge: 1180px;
 }
 
 @mixin hide-text {
-  font: 0 / 0 a;
+  font-size: 0px;
   text-shadow: none;
   color: transparent;
 }
